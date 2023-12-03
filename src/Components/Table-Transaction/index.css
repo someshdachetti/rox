@@ -1,0 +1,46 @@
+.table{
+    height:100%;
+    width:90%;
+    background: #fff;
+    border-radius:10px;
+    padding:23px;
+}
+
+.table-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.table-heading{
+    color:black;
+    font-size:14px;
+    font-family: "Roboto";
+    
+}
+li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.table-values-container{
+    font-size:10px;
+    font-weight:smaller;
+    font-family: "Roboto";
+    margin:35px;
+    list-style-type: none;
+}
+
+img{
+    height:18px;
+    width:18px;
+}
+.loading{
+    color:black;
+    letter-spacing: 1rem;
+    font-size:18px;
+   
+}

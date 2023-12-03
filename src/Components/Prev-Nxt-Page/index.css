@@ -1,0 +1,41 @@
+button{
+    height:30px;
+    width:80px;
+    border-width:0px;
+    margin-top:40px;
+    margin-left:10px;
+    border-radius:10px;
+    cursor: pointer;
+}
+.Page {
+    margin-left:74px;
+    color:#fff;
+    font-family:"Roboto";
+    font-size:16px;
+}
+.no-of_pages{
+    margin-right:74px;
+    color:#fff;
+    font-family:"Roboto";
+    font-size:16px;
+}
+.pages-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+    margin:60px;
+}
+.loading{
+    color:#fff;
+    letter-spacing: 1rem;
+    font-size:18px;
+    padding-top:19px;
+}
+
+.icon-left{
+    padding-right:20px;
+}
+.icon-right{
+    padding-left:20px;
+}

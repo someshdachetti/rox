@@ -1,0 +1,13 @@
+.transaction-board-container{
+    background:#fff;
+    height:200px;
+    width:200px;
+    border-radius:100px;
+  }
+  .transaction{
+    text-align: center;
+    padding-top:72px;
+    font-size:17px;
+    font-family:"Roboto";
+    
+  }

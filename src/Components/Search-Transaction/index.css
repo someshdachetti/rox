@@ -1,0 +1,35 @@
+.search {
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left:74px;
+}
+    
+.search-container{
+    background:#fff;
+    height:32px;
+    width:245px;
+    box-shadow:0px 1px 2px black;
+    display:flex;
+    flex-direction:row;
+    border-radius: 30px; 
+}
+
+.input{
+    background:transparent;
+    height:32px;
+    width:245px;
+    border-radius:96px;
+    border:none;
+    border-color:none;
+}
+.search-icon{
+    padding-top:10px;
+    padding-right:16px;
+}
+
+.search-icon{
+    padding-left:6px;
+    font-size:9px;
+}
