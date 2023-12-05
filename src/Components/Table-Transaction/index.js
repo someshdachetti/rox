@@ -6,10 +6,11 @@ export const Table = () => {
   const { data } = useContext(TableDataContext);
   const [dataTable, setDataTable] = useState([]);
   const [loading, setLoading] = useState(false);
-
+  
+  let soldCount = 0;
   useEffect(() => {
     setLoading(true);
-    if (Array.isArray(data) && data.length > 0) {
+    if (data.length > 0) {
       const tableData = data.map((item) => ({
         id: item.id,
         title: item.title,
@@ -41,16 +42,17 @@ export const Table = () => {
           <h1 className="table-heading">Sold</h1>
           <h1 className="table-heading">Image</h1>
         </div>
+
         {!loading ? (
           <ul>
             {dataTable.map((each) => (
               <li className="table-values-container" key={each.id}>
                 <p>{each.id}</p>
-                <p>{each.title}</p>
-                <p>{each.description}</p>
+                <p className="title">{each.title}</p>
+                <p className="discription">{each.description}</p>
                 <p>{each.price}</p>
                 <p>{each.category}</p>
-                <p>{each.sold}</p>
+                <p>{each.sold ? soldCount + 1 : soldCount }</p>
                 <img src={each.image} alt={each.title} />
               </li>
             ))}

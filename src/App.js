@@ -4,6 +4,7 @@ import { SearchTransaction } from "./Components/Search-Transaction";
 import { SelectTransaction } from "./Components/SelectTransaction";
 import { Table } from "./Components/Table-Transaction";
 import { PrevNxt } from "./Components/Prev-Nxt-Page";
+import { BarCharts } from "./Components/Bar-Charts";
 import "./App.css";
 
 // Define months array
@@ -43,15 +44,15 @@ function App() {
   const onChangeSearchFilter = (e) => {
     setSearchFilter(e.target.value);
 
-    const filter = data.filter((each) =>
-      each.title.toLowerCase().includes(e.target.value.toLowerCase())
+    const filter = data.filter(
+      (each) =>
+        each.title.toLowerCase().includes(e.target.value.toLowerCase()) 
     );
     setFilteredData(filter);
   };
 
   const onChageMonth = (e) => {
     setMonth(e.target.value);
-
     const selectMonth = data.filter((each) => {
       const date = new Date(each.dateOfSale);
       return listOfmonths[date.getMonth()] === e.target.value;
@@ -65,12 +66,12 @@ function App() {
     setPrice(Math.ceil(totalPriceForMonth));
 
     // Count sold and not sold products for the selected month
-    const countSold = selectMonth.filter((each) => each.sold === true).length;
+    const countSold = selectMonth.filter((each) => each.sold === true);
     const countNotSold = selectMonth.filter(
       (each) => each.sold === false
     ).length;
-    setCountSoldProducts(countSold);
-    setCountNotSoldProducts(countNotSold);
+    setCountSoldProducts(prev => prev +1);
+    setCountNotSoldProducts((prev) => prev + 1);
   };
 
   return (
@@ -92,6 +93,7 @@ function App() {
               </div>
               <Table />
               <PrevNxt />
+              <BarCharts setMonth={month} chartData={filteredData} />
             </div>
           </center>
         </TableDataContext.Provider>
